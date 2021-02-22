@@ -1,0 +1,10 @@
+.cover {
+  background: url(img/bg.png);
+  background-size: cover;
+}
+  .bg-unei {
+    background-image: linear-gradient(15deg, #0080ff 0%, #d5eaff 100%);
+}
+.bg-wakaba {
+    background-image: linear-gradient(15deg, #00d56a 0%, #d5ffea 100%);
+}
