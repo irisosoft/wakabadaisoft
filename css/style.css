@@ -8,3 +8,12 @@
 .bg-wakaba {
     background-image: linear-gradient(15deg, #00d56a 0%, #d5ffea 100%);
 }
+
+p.crown:before{
+	content:"";
+	display:inline-block;
+	width:1em;
+	height:1em;
+	background:url(../image/icon/crown.png) no-repeat;
+	background-size:contain;
+}
