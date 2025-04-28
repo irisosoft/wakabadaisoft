@@ -12,39 +12,40 @@
       margin: 0;
       padding: 10px;
     }
-    h1 {
+    h3 {
       text-align: center;
       color: #444;
       margin-bottom: 20px;
-      font-size: 1.5em;
+      font-size: 10px; /* ← 小さく */
     }
-    h2 {
+    h4 {
       text-align: center;
       margin-top: 30px;
       margin-bottom: 10px;
       color: #555;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
-      font-size: 1.3em;
+      font-size: 1.2em;
     }
     .table-container {
       overflow-x: auto;
       margin: 10px auto;
       background: white;
       border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
       max-width: 100%;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85em;
+      font-size: 0.8em;
       min-width: 600px;
     }
     th, td {
-      padding: 8px;
+      padding: 5px;
       text-align: center;
       white-space: nowrap;
+      font-size: 0.8em; /* ヘッダー文字を普通サイズ */
     }
     th {
       background-color: #4CAF50;
@@ -52,7 +53,6 @@
       position: sticky;
       top: 0;
       z-index: 1;
-      font-size: 0.9em;
     }
     td {
       border-bottom: 1px solid #eee;
@@ -69,31 +69,40 @@
     .scoreboard th {
       background-color: #607D8B;
     }
-
-    /* スマホ向け最適化 */
+    /* スコアボードの幅指定 */
+    .scoreboard th:first-child,
+    .scoreboard td:first-child {
+      width: 61px;
+    }
+    .scoreboard th:nth-child(n+2),
+    .scoreboard td:nth-child(n+2) {
+      width: 27px;
+    }
+  
+    /* スマホ最適化 */
     @media (max-width: 480px) {
       body {
         padding: 5px;
       }
       h1 {
-        font-size: 1.2em;
+        font-size: 10px; /* スマホ時さらに小さく */
       }
       h2 {
         font-size: 1em;
       }
       table {
-        font-size: 0.75em;
+        font-size: 0.7em;
         min-width: 500px;
       }
       th, td {
-        padding: 6px;
+        padding: 4px;
+        font-size: 0.7em;
       }
     }
   </style>
 
-  <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 <body>
@@ -108,12 +117,12 @@
 </header>
 
 
-  <h1>野球試合結果</h1>
+  <h3>野球試合結果</h3>
 
   <!-- make HTML COPy AreaStart-->
 
 	<main>
-    <h2>【リーグ戦】4/27 グリ VS 東急台</h2>
+    <h4>【リーグ戦】4/27 グリ VS 東急台</h4>
     <div class="table-container">
       <table class="scoreboard"7>
         <tr>
@@ -144,7 +153,7 @@
         </tr>
       </table>
     </div>
-    <h2>選手別成績</h2>
+    <h4>選手別成績</h4>
     <div class="table-container">
       <table class="teamA">
         <tr>
