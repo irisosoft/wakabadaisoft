@@ -10,42 +10,39 @@
       background: #f9f9f9;
       color: #333;
       margin: 0;
-      padding: 20px;
+      padding: 10px;
     }
     h1 {
       text-align: center;
       color: #444;
-      margin-bottom: 30px;
-      font-size: 1.8em;
+      margin-bottom: 20px;
+      font-size: 1.5em;
     }
     h2 {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
+      margin-bottom: 10px;
       color: #555;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
     .table-container {
       overflow-x: auto;
-      margin: 20px auto;
-      width: 100%;
-      max-width: 1000px;
+      margin: 10px auto;
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
     }
     table {
       width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      min-width: 800px;
+      border-collapse: collapse;
+      font-size: 0.85em;
+      min-width: 600px;
     }
     th, td {
-      padding: 10px;
+      padding: 8px;
       text-align: center;
       white-space: nowrap;
     }
@@ -55,6 +52,7 @@
       position: sticky;
       top: 0;
       z-index: 1;
+      font-size: 0.9em;
     }
     td {
       border-bottom: 1px solid #eee;
@@ -72,22 +70,30 @@
       background-color: #607D8B;
     }
 
-    /* スマホ向け調整 */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5em;
+    /* スマホ向け最適化 */
+    @media (max-width: 480px) {
+      body {
+        padding: 5px;
       }
-      h2 {
+      h1 {
         font-size: 1.2em;
       }
+      h2 {
+        font-size: 1em;
+      }
+      table {
+        font-size: 0.75em;
+        min-width: 500px;
+      }
       th, td {
-        padding: 8px;
-        font-size: 0.85em;
+        padding: 6px;
       }
     }
   </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 <body>
@@ -101,14 +107,15 @@
     </nav>
 </header>
 
-<h1>野球試合結果</h1>
+
+  <h1>野球試合結果</h1>
 
   <!-- make HTML COPy AreaStart-->
 
 	<main>
     <h2>【リーグ戦】4/27 グリ VS 東急台</h2>
     <div class="table-container">
-      <table class="scoreboard">
+      <table class="scoreboard"7>
         <tr>
         <th>チーム</th>
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>R</th>
@@ -162,7 +169,7 @@
     <div class="table-container">
       <table class="scoreboard">
         <tr>
-        <th>チーム</th>
+        <th width=61>チーム</th>
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>R</th>
         </tr>
         <tr>
@@ -213,7 +220,7 @@
     <div class="table-container">
       <table class="scoreboard">
         <tr>
-        <th>チーム</th>
+        <th width=61>チーム</th>
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>R</th>
         </tr>
         <tr>
@@ -264,7 +271,7 @@
     <div class="table-container">
       <table class="scoreboard">
         <tr>
-        <th>チーム</th>
+        <th width=61>チーム</th>
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>R</th>
         </tr>
         <tr>
@@ -313,7 +320,7 @@
     <div class="table-container">
       <table class="scoreboard">
         <tr>
-        <th>チーム</th>
+        <th width=61>チーム</th>
         <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>R</th>
         </tr>
         <tr>
@@ -360,7 +367,6 @@
           <td>11</td><td>鈴木</td><td>0.000 </td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>	</table>
     </div>
     </main>
-    
     
   <!-- make HTML COPy AreaEnd-->
 </body>
